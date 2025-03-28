@@ -14,10 +14,48 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Digital Wisdom",
-  description: "Levarage the power of digital wisdom to make better decisions.",
+  title: "Marketing Wisdom | Data-Driven Digital Growth",
+  description:
+    "Accelerate your business growth with data-driven digital marketing. From performance marketing and growth hacking to high-impact brand storytelling, we maximize your ROI and scale revenue.",
+  keywords: [
+    "digital marketing",
+    "performance marketing",
+    "growth hacking",
+    "demand generation",
+    "SEO",
+    "paid media",
+    "branding",
+    "content marketing",
+    "Google Ads",
+    "Facebook Ads",
+    "LinkedIn Ads",
+    "business growth",
+    "lead generation",
+  ],
+  openGraph: {
+    title: "Marketing Wisdom | Data-Driven Digital Growth",
+    description:
+      "Unlock the full potential of your business with our innovative marketing strategies. We offer demand generation, growth hacking, branding, and paid media execution to drive measurable results.",
+    url: "marketing-wisdom-landing-page.vercel.app",
+    type: "website",
+    images: [
+      {
+        url: "marketing-wisdom-landing-page.vercel.app/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Marketing Wisdom - Digital Marketing Strategy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@yourtwitterhandle",
+    title: "Marketing Wisdom | Data-Driven Digital Growth",
+    description:
+      "Maximize ROI with our cutting-edge digital marketing strategies. Performance marketing, growth hacking, and demand generation for business success.",
+    images: ["marketing-wisdom-landing-page.vercel.app/logo.png"],
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
