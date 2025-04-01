@@ -1,6 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
-import SuccessStories from "@/components/SuccessStories";
+// import SuccessStories from "@/components/SuccessStories";
 
 import TrustedBrands from "@/components/TrustedBrands";
 
@@ -10,7 +10,7 @@ export default function Home() {
       <Hero/>
       <TrustedBrands/>
       <ServicesSection/>
-      <SuccessStories/>
+      {/* <SuccessStories/> */}
    </div>
   );
 }

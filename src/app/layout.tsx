@@ -64,8 +64,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} dark:bg-black bg-slate-50`}>
-        <div className="container mx-auto">
-          <NavbarDemo/>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-md border-b border-neutral-700">
+          <div className="container mx-auto">
+            <NavbarDemo />
+          </div>
         </div>
         {children}
 
