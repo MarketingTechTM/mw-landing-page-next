@@ -75,7 +75,7 @@ export const TrustedBrands = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 lg:gap-48 gap-16 py-4 w-max flex-nowrap",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -100,10 +100,10 @@ export const TrustedBrands = ({
 export default function TrustedBrandsSection() {
   const brands = [
     { name: "Sadhana Tablet", src: "/brand_logo/astro_sadhana_logo.png" },
+    {name: "Black Lotus", src: "/brand_logo/black_lotus_logo.png"},
     { name: "Astro Sadhana", src: "/brand_logo/sadhana_tablet_logo.png" },
-    { name: "Black Lotus", src: "/brand_logo/astro_sadhana_logo.png" },
-    { name: "AstroAI", src: "/brand_logo/sadhana_tablet_logo.png" },
-    { name: "Sadhana App", src: "/brand_logo/sadhana_tablet_logo.png" },
+    { name: "AstroAI", src: "/brand_logo/astro_ai_logo.png" },
+    { name: "Sadhana App", src: "/brand_logo/sadhana_logo.png" },
   ];
 
   return (
@@ -118,7 +118,7 @@ export default function TrustedBrandsSection() {
       <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-sm lg:text-lg font-semibold">
         Join the brands that have unlocked their full potential with Digital Wisdom.
       </p>
-      <TrustedBrands brands={brands} direction="left" speed="slow" />
+      <TrustedBrands brands={brands} direction="left" speed="normal" />
     </div>
   );
 }

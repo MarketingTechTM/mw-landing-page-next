@@ -28,9 +28,12 @@ const MenuItems = [
   },
 ];
 
-const MobileNavBar = ({ isMobileMenuActive, setIsMobileMenuActive }: { 
-  isMobileMenuActive: boolean; 
-  setIsMobileMenuActive: (active: boolean) => void; 
+const MobileNavBar = ({
+  isMobileMenuActive,
+  setIsMobileMenuActive,
+}: {
+  isMobileMenuActive: boolean;
+  setIsMobileMenuActive: (active: boolean) => void;
 }) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -48,7 +51,10 @@ const MobileNavBar = ({ isMobileMenuActive, setIsMobileMenuActive }: {
           <div className="flex justify-between items-center border-b border-gray-700 pb-3">
             <Logo height={50} width={150} />
             <button onClick={() => setIsMobileMenuActive(false)}>
-              <IconX className="text-white transition-colors duration-200" stroke={2} />
+              <IconX
+                className="text-white transition-colors duration-200"
+                stroke={2}
+              />
             </button>
           </div>
 
@@ -57,7 +63,10 @@ const MobileNavBar = ({ isMobileMenuActive, setIsMobileMenuActive }: {
             {MenuItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.link ? (
-                  <motion.div whileHover={{ x: 10 }} transition={{ type: "spring", stiffness: 150 }}>
+                  <motion.div
+                    whileHover={{ x: 10 }}
+                    transition={{ type: "spring", stiffness: 150 }}
+                  >
                     <Link
                       href={item.link}
                       className="block px-4 py-2 text-lg hover:bg-gray-800 rounded-md transition"
@@ -69,11 +78,21 @@ const MobileNavBar = ({ isMobileMenuActive, setIsMobileMenuActive }: {
                 ) : (
                   <div>
                     <button
-                      onClick={() => setOpenDropdown(openDropdown === item.title ? null : item.title)}
+                      onClick={() =>
+                        setOpenDropdown(
+                          openDropdown === item.title ? null : item.title
+                        )
+                      }
                       className="flex justify-between w-full px-4 py-2 text-lg hover:bg-gray-800 rounded-md transition"
                     >
                       {item.title}
-                      <span>{openDropdown === item.title ? <IconChevronUp stroke={2} /> : <IconChevronDown stroke={2} />}</span>
+                      <span>
+                        {openDropdown === item.title ? (
+                          <IconChevronUp stroke={2} />
+                        ) : (
+                          <IconChevronDown stroke={2} />
+                        )}
+                      </span>
                     </button>
                     <AnimatePresence>
                       {openDropdown === item.title && (
@@ -85,7 +104,11 @@ const MobileNavBar = ({ isMobileMenuActive, setIsMobileMenuActive }: {
                           className="ml-6 space-y-2 mt-2"
                         >
                           {item.dropdownItems?.map((subItem) => (
-                            <motion.div key={subItem.title} whileHover={{ x: 10 }} transition={{ type: "spring", stiffness: 150 }}>
+                            <motion.div
+                              key={subItem.title}
+                              whileHover={{ x: 10 }}
+                              transition={{ type: "spring", stiffness: 150 }}
+                            >
                               <Link
                                 href={subItem.link}
                                 className="block px-4 py-2 text-sm bg-gray-900 hover:bg-gray-700 rounded-md transition"
@@ -113,18 +136,32 @@ export function NavbarDemo() {
 
   return (
     <>
-      <div className=" hidden lg:flex flex-row justify-between items-center dark:bg-black bg-slate-100 xl:px-10 px-0 py-2">
+      <div className=" hidden lg:flex flex-row justify-between items-center dark:bg-black xl:px-10 px-0 py-2">
         <Logo height={300} width={250} href="/" />
         {/* <div className="relative w-full flex items-center justify-between bg-black">
           <Navbar className="top-2" />
         </div> */}
-        <CtaButton title="Book A Strategy Call" url={"/book-a-call"} />
+        <CtaButton
+          title="Book a strategy Call"
+          url="/book-a-call"
+          size="h-12 w-52"
+          textSize="text-lg"
+          className="font-bold"
+        />
       </div>
 
       {/* Mobile Navbar */}
       <div className="lg:hidden flex">
         <div className="flex flex-row justify-between items-center w-full px-5 py-3 dark:bg-black bg-slate-50">
           <Logo height={100} width={200} href="/" />
+
+          <CtaButton
+          title="Book a strategy Call"
+          url="/book-a-call"
+          size="h-12 w-52"
+          textSize="text-lg"
+          className="font-bold hidden sm:flex"
+        />
           {/* <div className="cursor-pointer" onClick={() => setIsMobileMenuActive(!isMobileMenuActive)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +186,10 @@ export function NavbarDemo() {
             onClick={() => setIsMobileMenuActive(false)}
           />
         )}
-        <MobileNavBar isMobileMenuActive={isMobileMenuActive} setIsMobileMenuActive={setIsMobileMenuActive} />
+        <MobileNavBar
+          isMobileMenuActive={isMobileMenuActive}
+          setIsMobileMenuActive={setIsMobileMenuActive}
+        />
       </div>
     </>
   );
@@ -164,7 +204,7 @@ export function NavbarDemo() {
 //         {MenuItems.map((menu) => (
 //           <MenuItem key={menu.title} setActive={setActive} active={active} item={menu.title} link={menu.link}>
 //             {menu.dropdownItems && (
-//               <motion.div 
+//               <motion.div
 //                 initial={{ opacity: 0, y: -10 }}
 //                 animate={{ opacity: 1, y: 0 }}
 //                 exit={{ opacity: 0, y: -10 }}
