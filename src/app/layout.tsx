@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import  { NavbarDemo } from "@/components/Navbar";
+import { NavbarDemo } from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import { Toaster } from "react-hot-toast";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -36,11 +33,11 @@ export const metadata: Metadata = {
     title: "Marketing Wisdom | Data-Driven Digital Growth",
     description:
       "Unlock the full potential of your business with our innovative marketing strategies. We offer demand generation, growth hacking, branding, and paid media execution to drive measurable results.",
-    url: "marketing-wisdom-landing-page.vercel.app",
+    url: "https://marketing-wisdom-landing-page.vercel.app",
     type: "website",
     images: [
       {
-        url: "marketing-wisdom-landing-page.vercel.app/logo.png",
+        url: "https://marketing-wisdom-landing-page.vercel.app/logo.png",
         width: 1200,
         height: 630,
         alt: "Marketing Wisdom - Digital Marketing Strategy",
@@ -53,22 +50,33 @@ export const metadata: Metadata = {
     title: "Marketing Wisdom | Data-Driven Digital Growth",
     description:
       "Maximize ROI with our cutting-edge digital marketing strategies. Performance marketing, growth hacking, and demand generation for business success.",
-    images: ["marketing-wisdom-landing-page.vercel.app/logo.png"],
+    images: ["https://marketing-wisdom-landing-page.vercel.app/logo.png"],
   },
 };
+
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} dark:bg-black bg-slate-50`}>
-        <div className="container mx-auto">
-          <NavbarDemo/>
+      <Head>
+        {/* Favicon Links */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
+      <body className={`${inter.className} dark:bg-black bg-slate-50`}>
+      <Toaster />
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-md border-b border-neutral-700">
+          <div className="container mx-auto">
+            <NavbarDemo />
+          </div>
         </div>
         {children}
-
+        <div className="container mx-auto">
+          <Footer />
+        </div>
       </body>
     </html>
   );

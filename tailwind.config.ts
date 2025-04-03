@@ -15,22 +15,27 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "media", // Uses system preference
+  darkMode: ["media", "class"], // Uses system preference
 
   theme: {
-    extend: {
-      animation: {
-        scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-      },
-      keyframes: {
-        scroll: {
-          to: {
-            transform: "translate(calc(-50% - 0.5rem))",
-          },
-        },
-      },
-    },
+  	extend: {
+  		animation: {
+  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
+  		},
+  		keyframes: {
+  			scroll: {
+  				to: {
+  					transform: 'translate(calc(-50% - 0.5rem))'
+  				}
+  			}
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		colors: {}
+  	}
   },
   plugins: [addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
@@ -60,7 +65,8 @@ module.exports = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
-  ],
+      require("tailwindcss-animate")
+],
 };
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }: any) {

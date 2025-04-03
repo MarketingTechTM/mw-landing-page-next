@@ -49,3 +49,11 @@ a {
     color-scheme: dark;
   }
 } */
+
+
+@layer base {
+  :root {
+
+    --radius: 0.5rem
+  }
+}

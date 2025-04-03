@@ -1,17 +1,22 @@
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
-import SuccessStories from "@/components/SuccessStories";
+
+// import SuccessStories from "@/components/SuccessStories";
 
 import TrustedBrands from "@/components/TrustedBrands";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export default function Home() {
   return (
-   <div className="text-4xl text-center text-red-400">
+  <Suspense fallback= {<Loading/>}>
+       <div className="text-4xl text-center text-red-400">
       <Hero/>
       <TrustedBrands/>
       <ServicesSection/>
-      <SuccessStories/>
+      {/* <SuccessStories/> */}
    </div>
+  </Suspense>
   );
 }
 
