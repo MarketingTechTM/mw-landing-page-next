@@ -17,6 +17,8 @@ interface FormData {
 }
 
 export default function BookingForm() {
+
+    
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const [loading, setLoading] = useState(false);
 
@@ -24,7 +26,7 @@ export default function BookingForm() {
     setLoading(true);
 
     const formData = new FormData();
-    formData.append("access_key", "0ae0a9d7-e121-48cd-bd5c-dc1355f7d7c4");
+    formData.append("access_key", "761708e4-22eb-42cd-897c-c345687a11d3");
     formData.append("email", data.email);
     formData.append("firstname", data.firstname);
     formData.append("lastname", data.lastname);
@@ -40,7 +42,52 @@ export default function BookingForm() {
 
       const result = await response.json();
       if (result.success) {
-        toast.success("Your booking request has been submitted successfully!");
+
+        // toast.success("Your booking request has been submitted successfully!", {duration: 18000});
+        toast.custom((t) => (
+            <div
+              className={`relative w-[90%] sm:w-auto max-w-xs sm:max-w-sm md:max-w-md p-4 sm:p-5 rounded-xl shadow-lg border 
+              flex items-center space-x-3 sm:space-x-4 transition-all duration-300 text-sm sm:text-base
+              ${
+                document.documentElement.classList.contains("dark")
+                  ? "bg-gray-800 border-gray-600 text-white"
+                  : "bg-white border-gray-200 text-gray-800"
+              }`}
+            >
+              {/* Animated Tick */}
+              <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-6 h-6 text-white animate-checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+        
+              {/* Message */}
+              <div className="flex-1 text-left">
+                <p className="leading-tight">
+                  <span className="font-semibold">Thank you for showing your interest.</span>
+                  <br />
+                  Our team will reach out to you shortly.
+                </p>
+              </div>
+        
+              {/* Close Button */}
+              <button
+                onClick={() => toast.dismiss(t.id)}
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              >
+                ✖
+              </button>
+            </div>
+          ), {
+            duration: 180000, // 3 minutes
+            id: "success-popup",
+          });
         reset();
       } else {
         throw new Error(result.message || "Something went wrong");
@@ -56,7 +103,7 @@ export default function BookingForm() {
   return (
     <div className="p-8 rounded-xl border border-[#C5BDBD4D] shadow-lg">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-        <input type="hidden" name="access_key" value="0ae0a9d7-e121-48cd-bd5c-dc1355f7d7c4" />
+        <input type="hidden" name="access_key" value="761708e4-22eb-42cd-897c-c345687a11d3" />
 
         <LabelInputContainer>
           <Label htmlFor="company-email" className="text-left text-white">Email Address *</Label>
@@ -105,7 +152,7 @@ export default function BookingForm() {
         </LabelInputContainer>
 
         <LabelInputContainer>
-          <Label htmlFor="budget" className="text-left text-white">Estimated Monthly Media Budget *</Label>
+          <Label htmlFor="budget" className="text-left text-white">  Estimated Monthly Media Budget (in Lakhs) *</Label>
           <Input id="budget" type="number"
             className="bg-black/60 text-white border-gray-600 border shadow-[inset_0px_4px_20px_0px_#FFFFFF40]"
             {...register("budget", {
