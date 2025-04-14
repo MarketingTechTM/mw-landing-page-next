@@ -98,13 +98,23 @@ export const TrustedBrands = ({
 
 // Updated Trusted Brands Section
 export default function TrustedBrandsSection() {
+  // const brands = [
+  //   { name: "Sadhana Tablet", src: "/brand_logo/logos/2.png" },
+  //   { name: "Black Lotus", src: "/brand_logo/black_lotus_logo.png" },
+  //   { name: "Astro Sadhana", src: "/brand_logo/sadhana_tablet_logo.png" },
+  //   { name: "AstroAI", src: "/brand_logo/astro_ai_logo.png" },
+  //   { name: "Sadhana App", src: "/brand_logo/sadhana_app_logo.png" },
+  // ];
+
   const brands = [
-    { name: "Sadhana Tablet", src: "/brand_logo/astro_sadhana_logo.png" },
-    { name: "Black Lotus", src: "/brand_logo/black_lotus_logo.png" },
-    { name: "Astro Sadhana", src: "/brand_logo/sadhana_tablet_logo.png" },
-    { name: "AstroAI", src: "/brand_logo/astro_ai_logo.png" },
-    { name: "Sadhana App", src: "/brand_logo/sadhana_app_logo.png" },
+    { name: "Sadhana Tablet", src: "/brand_logo/logos/2.png" },
+    { name: "Black Lotus", src: "/brand_logo/logos/3.png" },
+    { name: "Astro Sadhana", src: "/brand_logo/logos/4.png" },
+    { name: "AstroAI", src: "/brand_logo/logos/5.png" },
+    { name: "Sadhana App", src: "/brand_logo/logos/6.png" },
   ];
+
+
 
   return (
     <div className="flex justify-center flex-col items-center gap-6 w-full py-10 dark:bg-black bg-white">

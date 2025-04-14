@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 
+.custom-list li {
+  position: relative;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.custom-list li::before {
+  content: ''; /* or 🟢 or ➤ or anything you like */
+  position: absolute;
+  left: 0;
+  color: #00ADB5;
+  font-weight: bold;
+}
 
 
 

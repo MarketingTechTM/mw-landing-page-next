@@ -8,7 +8,9 @@ import Logo from "./ui/Logo";
 export default function Footer() {
   return (
     <footer className="relative bg-gradient-to-b from-gray-100 to-gray-200 dark:from-black dark:to-[#0f0f0f] text-black dark:text-white py-10">
-      <div className="container mx-auto px-6">
+    <div className="flex flex-col items-center justify-center">
+
+    <div className=" mx-auto px-6 container">
         {/* Upper Divider */}
         <motion.div 
           initial={{ scaleX: 0 }} 
@@ -18,7 +20,7 @@ export default function Footer() {
         />
         
         {/* Footer Content */}
-        <div className="flex flex-col sm:flex-row items-center justify-between text-center sm:text-left space-y-4 sm:space-y-0">
+        <div className="flex flex-col sm:flex-row  items-center justify-between text-center sm:text-left space-y-4 sm:space-y-0">
           <Logo height={200} width={200} />
 
           <motion.div 
@@ -53,6 +55,8 @@ export default function Footer() {
           </Link> */}
         </div>
       </div>
+
+    </div>
     </footer>
   );
 }
