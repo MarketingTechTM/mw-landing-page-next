@@ -2,7 +2,9 @@ import React from "react";
 
 export default function Loading() {
   return (
-    <div className="relative w-32 h-24 mx-auto">
+   <div className="flex justify-center items-center min-h-screen">
+
+<div className="relative w-32 mx-auto">
       <div className="absolute bottom-8 left-[50px] w-[30px] h-[30px] bg-teal-500 rounded-full animate-bounce"></div>
       <div
         className="absolute top-0 right-0 h-[7px] w-[45px] rounded-md 
@@ -41,6 +43,7 @@ export default function Loading() {
         }
       `}</style>
     </div>
+   </div>
   );
 };
 

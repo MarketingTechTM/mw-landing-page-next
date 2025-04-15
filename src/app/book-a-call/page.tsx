@@ -23,7 +23,7 @@ export default function BookACall() {
             <div className="text-[50px] font-semibold leading-[96%] tracking-[13%]
              lg:text-[88px] lg:font-bold lg:leading-tight text-white text-justify"
             >
-              Scale Your <br/> SaaS Faster
+              Scale Your <br/> Company Faster
             </div>
 
             <p className="text-[18px] md:text-[22px] text-gray-400 mt-5 lg:mt-9 leading-tight text-justify">

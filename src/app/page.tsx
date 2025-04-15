@@ -1,7 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
 
-// import SuccessStories from "@/components/SuccessStories";
+import SuccessStories from "@/components/SuccessStories";
 
 import TrustedBrands from "@/components/TrustedBrands";
 import { Suspense } from "react";
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero/>
       <TrustedBrands/>
       <ServicesSection/>
-      {/* <SuccessStories/> */}
+      <SuccessStories/>
    </div>
   </Suspense>
   );

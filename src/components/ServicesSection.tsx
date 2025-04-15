@@ -51,7 +51,7 @@ export function ServicesSection() {
         </p>
 
         <div className="container mx-auto px-8">
-        <HoverEffect items={servicesSection.services} />
+        <HoverEffect className="cursor-default" items={servicesSection.services} />
         </div>
       </div>
     </>

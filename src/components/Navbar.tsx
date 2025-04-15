@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-// import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu";
-// import { cn } from "@/lib/utils";
+import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu";
+import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
 import { CtaButton } from "./ui/button";
 import { IconChevronDown, IconChevronUp, IconX } from "@tabler/icons-react";
@@ -15,7 +15,7 @@ const MenuItems = [
   },
   {
     title: "Success Stories",
-    link: "/success-stories",
+    link: "/customer-stories",
   },
   {
     title: "Resources",
@@ -45,7 +45,8 @@ const MobileNavBar = ({
           animate={{ x: 0 }}
           exit={{ x: "-100%" }} // Closing animation
           transition={{ type: "spring", stiffness: 100, damping: 15 }}
-          className="fixed top-0 left-0 h-full w-3/4 sm:w-1/2 bg-black dark:bg-black shadow-lg z-50 p-5 text-white"
+          className="fixed top-0 left-0 h-screen w-3/4 sm:w-1/2 bg-black dark:bg-black
+           shadow-lg z-[50] p-5 text-white"
         >
           {/* Header */}
           <div className="flex justify-between items-center border-b border-gray-700 pb-3">
@@ -59,7 +60,7 @@ const MobileNavBar = ({
           </div>
 
           {/* Menu Items */}
-          <nav className="mt-5 space-y-4">
+          <nav className="mt-5 space-y-4 bg-black">
             {MenuItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.link ? (
@@ -136,11 +137,11 @@ export function NavbarDemo() {
 
   return (
     <>
-      <div className=" hidden lg:flex flex-row justify-between items-center dark:bg-black xl:px-10 px-0 py-2">
+      <div className=" hidden lg:flex flex-row justify-between items-center dark:bg-black xl:px-10 px-0 py-6">
         <Logo height={300} width={250} href="/" />
-        {/* <div className="relative w-full flex items-center justify-between bg-black">
+        <div className="relative w-full flex items-center justify-between bg-black">
           <Navbar className="top-2" />
-        </div> */}
+        </div>
         <CtaButton
           title="Book a strategy Call"
           url="/book-a-call"
@@ -162,7 +163,7 @@ export function NavbarDemo() {
           textSize="text-lg"
           className="font-bold hidden sm:flex"
         />
-          {/* <div className="cursor-pointer" onClick={() => setIsMobileMenuActive(!isMobileMenuActive)}>
+          <div className="cursor-pointer" onClick={() => setIsMobileMenuActive(!isMobileMenuActive)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-black dark:text-white"
@@ -176,7 +177,7 @@ export function NavbarDemo() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
               )}
             </svg>
-          </div> */}
+          </div>
         </div>
 
         {/* Backdrop and Mobile Nav */}
@@ -195,32 +196,32 @@ export function NavbarDemo() {
   );
 }
 
-// function Navbar({ className }: { className?: string }) {
-//   const [active, setActive] = useState<string | null>(null);
+function Navbar({ className }: { className?: string }) {
+  const [active, setActive] = useState<string | null>(null);
 
-//   return (
-//     <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
-//       <Menu setActive={setActive}>
-//         {MenuItems.map((menu) => (
-//           <MenuItem key={menu.title} setActive={setActive} active={active} item={menu.title} link={menu.link}>
-//             {menu.dropdownItems && (
-//               <motion.div
-//                 initial={{ opacity: 0, y: -10 }}
-//                 animate={{ opacity: 1, y: 0 }}
-//                 exit={{ opacity: 0, y: -10 }}
-//                 transition={{ duration: 0.3 }}
-//                 className="flex flex-col space-y-4 text-sm"
-//               >
-//                 {menu.dropdownItems.map((subItem) => (
-//                   <HoveredLink key={subItem.title} href={subItem.link}>
-//                     {subItem.title}
-//                   </HoveredLink>
-//                 ))}
-//               </motion.div>
-//             )}
-//           </MenuItem>
-//         ))}
-//       </Menu>
-//     </div>
-//   );
-// }
+  return (
+    <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
+      <Menu setActive={setActive}>
+        {MenuItems.map((menu) => (
+          <MenuItem key={menu.title} setActive={setActive} active={active} item={menu.title} link={menu.link}>
+            {menu.dropdownItems && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="flex flex-col space-y-4 text-sm"
+              >
+                {menu.dropdownItems.map((subItem) => (
+                  <HoveredLink key={subItem.title} href={subItem.link}>
+                    {subItem.title}
+                  </HoveredLink>
+                ))}
+              </motion.div>
+            )}
+          </MenuItem>
+        ))}
+      </Menu>
+    </div>
+  );
+}

@@ -10,6 +10,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+
+
 export const metadata: Metadata = {
   title: "Marketing Wisdom | Data-Driven Digital Growth",
   description:
@@ -58,7 +60,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.className} dark`}>
       <Head>
         {/* Favicon Links */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -66,7 +68,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <body className={`${inter.className} dark:bg-black bg-slate-50`}>
+      <body className={` dark:bg-black bg-slate-50`}>
       <Toaster />
         <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-md border-b border-neutral-700">
           <div className="container mx-auto">
@@ -74,7 +76,7 @@ export default function RootLayout({
           </div>
         </div>
         {children}
-        <div className="container mx-auto">
+        <div className=" mx-auto">
           <Footer />
         </div>
       </body>
