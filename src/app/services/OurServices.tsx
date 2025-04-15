@@ -83,26 +83,29 @@ export default function OurServices() {
 
       {/* Footer banner */}
 
-      <div className="relative border border-[#007182]
+      <div
+        className="relative border border-[#007182]
       shadow-2xl shadow-[#007182] mt-[90px] lg:mt-[143px] mb-[50px] lg:mb-[73px]
-        rounded-[20px] overflow-hidden">
-          
-      <div className="relative flex justify-between items-center bg-[#181717]
-       p-6 rounded-lg border border-transparent">
-        <span className="text-white font-extralight text-[8px] sm:text-lg lg:text-3xl">
-          Let&apos;s Start your High Growth Journey Now
-        </span>
-       <div className="">
-                 <CtaButton
-                   title="Book a strategy Call"
-                   url="/book-a-call"
-                   size=""
-                   textSize="text-[7px] sm:text-lg"
-                   className="font-bold "
-                 />
-               </div>
+        rounded-[20px] overflow-hidden"
+      >
+        <div
+          className="relative flex justify-between items-center bg-[#181717]
+       p-6 rounded-lg border border-transparent"
+        >
+          <span className="text-white font-extralight text-[8px] sm:text-lg lg:text-3xl">
+            Let&apos;s Start your High Growth Journey Now
+          </span>
+          <div className="">
+            <CtaButton
+              title="Book a strategy Call"
+              url="/book-a-call"
+              size=""
+              textSize="text-[7px] sm:text-lg"
+              className="font-bold "
+            />
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

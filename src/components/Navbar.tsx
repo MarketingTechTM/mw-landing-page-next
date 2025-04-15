@@ -15,7 +15,7 @@ const MenuItems = [
   },
   {
     title: "Success Stories",
-    link: "/success-stories",
+    link: "/customer-stories",
   },
   {
     title: "Resources",
@@ -45,7 +45,8 @@ const MobileNavBar = ({
           animate={{ x: 0 }}
           exit={{ x: "-100%" }} // Closing animation
           transition={{ type: "spring", stiffness: 100, damping: 15 }}
-          className="fixed top-0 left-0 h-full w-3/4 sm:w-1/2 bg-black dark:bg-black shadow-lg z-50 p-5 text-white"
+          className="fixed top-0 left-0 h-screen w-3/4 sm:w-1/2 bg-black dark:bg-black
+           shadow-lg z-[50] p-5 text-white"
         >
           {/* Header */}
           <div className="flex justify-between items-center border-b border-gray-700 pb-3">
@@ -59,7 +60,7 @@ const MobileNavBar = ({
           </div>
 
           {/* Menu Items */}
-          <nav className="mt-5 space-y-4">
+          <nav className="mt-5 space-y-4 bg-black">
             {MenuItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.link ? (

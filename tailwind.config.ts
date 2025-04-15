@@ -15,7 +15,7 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: ["media", "class"], // Uses system preference
+  darkMode: "class", // Uses system preference
 
   theme: {
   	extend: {

@@ -1,6 +1,6 @@
 "use client";
 
-import { GridBackground } from "./ui/GridBackground";
+import { GridBackground } from "@/components/ui/GridBackground";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
@@ -26,17 +26,19 @@ const successStories = [
     logo: "/brand_logo/logos/6.png",
   },
 ];
+
 export default function SuccessStories() {
   const scrollRef = useRef(null);
  
+
   return (
     <GridBackground>
-      <section className="py-20 px-4 md:px-20 flex flex-col items-center text-white w-full">
+      <section className="py-32 px-4 md:px-20 flex flex-col items-center text-white w-full">
         {/* Section Header */}
         <div className="text-center max-w-4xl mb-16">
           <h2 className="text-[28px] md:text-[42px] font-bold tracking-tight leading-tight">
             Success Stories with Marketing Wisdom
-           
+            
           </h2>
           <p className="mt-4 text-[#B0B0B0] text-base md:text-xl font-inter leading-relaxed">
             Explore real-world results from businesses that have leveraged Marketing Wisdom expertise for growth and transformation.
@@ -81,15 +83,7 @@ export default function SuccessStories() {
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="mt-14">
-          <Link
-            href="/customer-stories"
-            className="bg-[#1D1C1C] hover:bg-[#3D3A3A] border border-white/10 text-white text-xl px-10 py-3 rounded-2xl font-medium transition-colors"
-          >
-            View all Success Stories
-          </Link>
-        </div>
+       
       </section>
     </GridBackground>
   );
