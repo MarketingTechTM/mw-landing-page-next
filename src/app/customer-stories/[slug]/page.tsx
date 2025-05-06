@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { stories } from "../customerStoriesData";
 import { CtaButton } from "@/components/ui/button";
 
-
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -50,12 +49,14 @@ const Header = ({ story }: { story: Story }) => {
       }}
     >
       <div className="flex flex-col justify-center items-center gap-10">
-        <img
-          src={story.logo}
-          alt={story.customerName}
-          className="h-20 object-contain mx-auto md:mx-0"
-        />
-
+       
+        <div className="h-12 mb-5">
+          <img
+            src={story.logo}
+            alt="logo"
+            className="h-full w-auto mx-auto object-contain"
+          />
+        </div>
 
         <div className="flex flex-col justify-center items-center gap-4 md:gap-7">
           <div className="flex flex-col gap-2 justify-center items-center px-0 max-w-96  md:max-w-2xl">
@@ -67,12 +68,13 @@ const Header = ({ story }: { story: Story }) => {
             </p>
           </div>
 
-          <div className="mt-6 mb-6 md:mb-20 flex flex-row gap-4 md:gap-16">
+          <div className="mx-5 mt-6 mb-6 md:mb-20 flex flex-col lg:flex-row gap-4 md:gap-16">
             {story.highlight.map((item, index) => (
               <div
                 key={index}
-                className="shadow-[0px_4px_4px_0px_#FFFFFF05] rounded-2xl flex flex-col
-                   justify-center items-center px-2 py-4 md:px-10 md:py-10 md:w-80 w-28 h-20 md:h-auto md:max-w-80"
+                className="shadow-[0px_4px_4px_0px_#FFFFFF05] 
+                rounded-2xl flex flex-col gap-2 justify-center items-center
+                 px-2 py-4 md:px-10 md:py-10 md:w-80 w-full md:h-auto md:max-w-80"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(127, 108, 67, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%)",
@@ -85,7 +87,7 @@ const Header = ({ story }: { story: Story }) => {
                 >
                   {item.title}
                 </p>
-                <p className="text-[8px] md:text-xl leading-[120%] font-bold text-white text-center">
+                <p className="text-sm p-1 md:text-xl  leading-[120%] font-bold text-white text-center">
                   {item.subtitle}
                 </p>
               </div>
@@ -147,7 +149,7 @@ const FooterBanner = () => {
                 rounded-[20px] overflow-hidden"
     >
       <div
-        className="relative flex justify-between items-center bg-[#181717]
+        className="relative flex gap-6 lg:gap-24 justify-between items-center bg-[#181717]
                p-6 rounded-lg border border-transparent"
       >
         <span className="text-white font-extralight text-[8px] sm:text-lg lg:text-3xl">
@@ -178,24 +180,24 @@ export default async function CustomerStoryPage({
   if (!story) return notFound();
 
   return (
-    <main className="relative overflow-hidden  flex flex-col items-center justify-center
-     min-h-screen mx-auto px-4 sm:px-6 lg:px-8 py-40 text-white">
-    
+    <main
+      className="relative overflow-hidden  flex flex-col items-center justify-center
+     min-h-screen mx-auto px-4 sm:px-6 lg:px-8 py-40 text-white"
+    >
       <div
         className="pointer-events-none absolute w-[761px] h-[761px] rounded-full bg-[#00718280] opacity-10 md:opacity-40 blur-[1000px]"
         style={{ top: "-200px", left: "-200px" }}
       ></div>
 
-      
       <div
         className="pointer-events-none absolute w-[761px] h-[761px] rounded-full bg-[#007182] opacity-10 md:opacity-40 blur-[1000px]"
         style={{ bottom: "-200px", right: "-200px" }}
       ></div>
       <div className=" max-w-full">
-      <Header story={story} />
-      <StrategyAndExecution strategy={story.strategy} />
-      <Results results={story.results} />
-      <FooterBanner />
+        <Header story={story} />
+        <StrategyAndExecution strategy={story.strategy} />
+        <Results results={story.results} />
+        <FooterBanner />
       </div>
     </main>
   );
