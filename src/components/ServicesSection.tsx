@@ -42,11 +42,11 @@ export function ServicesSection() {
   return (
     <>
       <div className="flex bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 justify-center flex-col items-center gap-6 w-full py-10 dark:bg-black bg-white">
-        <h2 className="ext-lg lg:text-4xl font-bold text-center text-black dark:text-white">
+        <h2 className="text-2xl md:text-4xl font-bold text-center text-black dark:text-white">
           {servicesSection.title}
         </h2>
 
-        <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-xs lg:text-lg">
+        <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-xs md:text-lg px-1">
           {servicesSection.description}
         </p>
 

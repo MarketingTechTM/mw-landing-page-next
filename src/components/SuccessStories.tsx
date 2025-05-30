@@ -33,12 +33,12 @@ export default function SuccessStories() {
     <GridBackground>
       <section className="py-20 px-4 md:px-20 flex flex-col items-center text-white w-full">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mb-16">
-          <h2 className="text-[28px] md:text-[42px] font-bold tracking-tight leading-tight">
+        <div className="text-center max-w-4xl mb-16 flex flex-col gap-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-center text-black dark:text-white">
             Success Stories with Marketing Wisdom
            
           </h2>
-          <p className="mt-4 text-[#B0B0B0] text-base md:text-xl font-inter leading-relaxed">
+          <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-xs md:text-lg px-1">
             Explore real-world results from businesses that have leveraged Marketing Wisdom expertise for growth and transformation.
           </p>
         </div>

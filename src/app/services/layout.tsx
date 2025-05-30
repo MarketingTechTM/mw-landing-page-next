@@ -48,7 +48,7 @@ export default function ServicesLayout({
 }) {
   return (
     <div className={` bg-slate-50 dark:bg-black`}>  
-      <main className="pt-10">{children}</main> 
+      <main className="">{children}</main> 
     </div>
   );
 }

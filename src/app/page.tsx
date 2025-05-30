@@ -10,7 +10,7 @@ import Loading from "./loading";
 export default function Home() {
   return (
   <Suspense fallback= {<Loading/>}>
-       <div className="text-4xl text-center text-red-400">
+       <div className="text-4xl text-center">
       <Hero/>
       <TrustedBrands/>
       <ServicesSection/>
