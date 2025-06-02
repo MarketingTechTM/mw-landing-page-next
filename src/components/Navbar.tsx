@@ -145,9 +145,9 @@ export function NavbarDemo() {
         <CtaButton
           title="Book a strategy Call"
           url="/book-a-call"
-          size="h-12 w-52"
+          size="h-12 w-56"
           textSize="text-lg"
-          className="font-bold"
+          className="font-bold w-"
         />
       </div>
 

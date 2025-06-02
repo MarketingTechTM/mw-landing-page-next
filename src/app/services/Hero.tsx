@@ -46,14 +46,14 @@ export default function Hero() {
           </div>
 
           <div className="mt-10 mb-5 md:mb-10">
-            <CtaButton
-              title="Book a strategy Call"
-              url="/book-a-call"
-              size="h-16 w-52"
-              textSize="text-lg"
-              className="font-bold"
-            />
-          </div>
+          <CtaButton
+            title="Book a strategy Call"
+            url="/book-a-call"
+            size="h-16 w-auto"
+            textSize="text-lg lg:text-xl"
+            className="font-bold"
+          />         
+        </div>
         </div>
       </div>
     </div>

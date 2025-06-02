@@ -43,10 +43,10 @@ export function Hero() {
           <CtaButton
             title="Book a strategy Call"
             url="/book-a-call"
-            size="h-16 w-52"
-            textSize="text-lg"
+            size="h-16 w-auto"
+            textSize="text-lg lg:text-xl"
             className="font-bold"
-          />
+          />         
         </div>
       </HeroHighlight>
     </div>

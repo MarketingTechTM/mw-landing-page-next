@@ -109,7 +109,7 @@ export default function TrustedBrandsSection() {
 
 
   return (
-    <div className="flex justify-center flex-col items-center gap-6 w-full py-10 dark:bg-black bg-white">
+    <div className="flex justify-center flex-col items-center gap-6 w-full py-5 px-1 dark:bg-black bg-white">
       <h2 className="text-2xl md:text-4xl font-bold text-center text-black dark:text-white">
         Trusted by Industry-Leading Brands
       </h2>
