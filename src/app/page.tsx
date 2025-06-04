@@ -15,7 +15,7 @@ export default function Home() {
       <TrustedBrands/>
       <ServicesSection/>
       <SuccessStories/>
-   </div>
+   </div>       
   </Suspense>
   );
 }

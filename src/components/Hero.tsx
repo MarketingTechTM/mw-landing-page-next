@@ -28,8 +28,10 @@ export function Hero() {
               Maximize Your Marketing ROI, Skyrocket Revenue, and Achieve High
               Growth
             </motion.h1>
-            <div className="text-black dark:text-white dark:opacity-80 
-             text-base text-center lg:text-xl max-w-6xl px-2 mt-2">
+            <div
+              className="text-black dark:text-white dark:opacity-80 
+             text-base text-center lg:text-xl max-w-6xl px-2 mt-2"
+            >
               We help B2C SaaS and e-commerce brands with everything from paid
               ads to social media, digital analytics to conversion rate
               optimization, go-to-market strategy to growth hacking, and content
@@ -38,7 +40,6 @@ export function Hero() {
             </div>
           </div>
         </div>
-
         <div className="mt-10 mb-5 md:mb-10">
           <CtaButton
             title="Book a strategy Call"
@@ -46,7 +47,7 @@ export function Hero() {
             size="h-16 w-auto"
             textSize="text-lg lg:text-xl"
             className="font-bold"
-          />         
+          />
         </div>
       </HeroHighlight>
     </div>

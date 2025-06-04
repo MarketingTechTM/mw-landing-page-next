@@ -9,7 +9,7 @@ export default function BookACall() {
   
   return (
     <GridBackground>
-      <div className="flex min-h-screen items-center justify-center px-0 lg:px-6 py-5 lg:py-10 mt-10">
+      <div className="flex min-h-[80vh]  items-center justify-center px-0 lg:px-6 py-5 lg:py-10">
         <div
           style={{ backgroundImage: `url(${bgImage.src})` }}
           className="max-w-7xl w-full grid md:grid-cols-2 gap-12 border border-gray-300 text-center
