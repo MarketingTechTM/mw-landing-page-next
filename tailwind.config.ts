@@ -19,6 +19,9 @@ module.exports = {
 
   theme: {
   	extend: {
+      boxShadow: {
+        'custom': '0px 8px 12px 0px #0000004D',
+      },
   		animation: {
   			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         shimmer: "shimmer 2s linear infinite"
@@ -43,7 +46,8 @@ module.exports = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		colors: {}
+  		colors: {},
+      
   	}
   },
   plugins: [addVariablesForColors,

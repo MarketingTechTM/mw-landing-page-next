@@ -22,9 +22,10 @@ export const MenuItems = [
     title: "Resources",
     link: null,
     dropdownItems: [
-      { title: "Books", link: "/books" },
+      { title: "Recommended Books", link: "/books" },
+      { title: "Recommended Courses", link: "/courses" },
       { title: "Podcast", link: "/podcasts" },
-      { title: "Courses", link: "/courses" },
+      
     ],
   },
 ];
