@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 
-
 const successStories = [
   {
     title: "250%",
@@ -28,18 +27,18 @@ const successStories = [
 ];
 export default function SuccessStories() {
   const scrollRef = useRef(null);
- 
+
   return (
     <GridBackground>
-      <section className="py-20 px-4 md:px-20 flex flex-col items-center text-white w-full">
+      <section className="py-10 px-4 md:px-20 flex flex-col items-center text-white w-full">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mb-16">
-          <h2 className="text-[28px] md:text-[42px] font-bold tracking-tight leading-tight">
+        <div className="text-center max-w-4xl mb-16 flex flex-col gap-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-center text-black dark:text-white">
             Success Stories with Marketing Wisdom
-           
           </h2>
-          <p className="mt-4 text-[#B0B0B0] text-base md:text-xl font-inter leading-relaxed">
-            Explore real-world results from businesses that have leveraged Marketing Wisdom expertise for growth and transformation.
+          <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-xs md:text-lg px-1">
+            Explore real-world results from businesses that have leveraged
+            Marketing Wisdom expertise for growth and transformation.
           </p>
         </div>
 
@@ -58,25 +57,28 @@ export default function SuccessStories() {
                 <img
                   src={story.logo}
                   alt="logo"
-                 
                   className="h-full w-auto mx-auto object-contain"
                 />
               </div>
 
-              <h3 className="text-[32px] font-bold text-[#007182] mb-2">
+              <h3 className="text-[32px] font-bold  text-white  mb-2">
                 {story.title}
               </h3>
-              <p className="text-sm md:text-base text-white leading-[140%] mb-6">
+              <p className="text-sm md:text-base text-gray-300 leading-[140%] mb-6">
                 {story.desc}
               </p>
 
               <Link
                 href={story.url}
-                className="bg-[#007182AA] hover:bg-[#007182] 
-                transition-colors text-white text-base px-8 py-3 rounded-3xl font-semibold"
+                className="inline-flex text-base h-12 animate-shimmer items-center justify-center rounded-md
+                 border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)]
+                  bg-[length:200%_100%] px-6 font-medium text-slate-300 
+                  transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400
+                 focus:ring-offset-2 focus:ring-offset-slate-50"
               >
                 Read More
               </Link>
+            
             </motion.div>
           ))}
         </div>

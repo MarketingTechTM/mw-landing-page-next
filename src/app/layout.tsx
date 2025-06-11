@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { NavbarDemo } from "@/components/Navbar";
+import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,13 +71,17 @@ export default function RootLayout({
       </Head>
       <body className={` dark:bg-black bg-slate-50`}>
       <Toaster />
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-md border-b border-neutral-700">
-          <div className="container mx-auto">
-            <NavbarDemo />
+        <div className="sticky top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80
+         backdrop-blur-md shadow-md border-b border-neutral-700">
+          <div className="container mx-auto z-50">
+            <Navbar />
+           
           </div>
         </div>
+        <main>
         {children}
-        <div className=" mx-auto">
+        </main>
+        <div className="mx-auto">
           <Footer />
         </div>
       </body>

@@ -31,7 +31,7 @@ export default function Footer() {
             <CtaButton 
               title="Book a Strategy Call" 
               url="/book-a-call" 
-              size="h-16 w-52" 
+              size="h-16 w-60" 
               textSize="text-lg" 
               className="font-bold"
             />

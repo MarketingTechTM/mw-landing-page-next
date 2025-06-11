@@ -109,15 +109,15 @@ export default function TrustedBrandsSection() {
 
 
   return (
-    <div className="flex justify-center flex-col items-center gap-6 w-full py-10 dark:bg-black bg-white">
-      <h2 className="text-lg lg:text-4xl font-bold text-center text-black dark:text-white">
+    <div className="flex justify-center flex-col items-center gap-6 w-full py-5 px-1 dark:bg-black bg-white">
+      <h2 className="text-2xl md:text-4xl font-bold text-center text-black dark:text-white">
         Trusted by Industry-Leading Brands
       </h2>
-      <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-xs lg:text-lg">
+      <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-xs md:text-lg px-1">
         Top brands trust Marketing Wisdom to accelerate growth, boost engagement, and maximize revenue. Our data-driven 
         strategies and cutting-edge execution help businesses stay ahead in the digital landscape.
       </p>
-      <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-sm lg:text-lg font-semibold">
+      <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 text-sm md:text-lg font-semibold px-1">
         Join the brands that have unlocked their full potential with Marketing Wisdom.
       </p>
       <TrustedBrands brands={brands} direction="left" speed="normal" />
