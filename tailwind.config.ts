@@ -21,6 +21,7 @@ module.exports = {
   	extend: {
       boxShadow: {
         'custom': '0px 8px 12px 0px #0000004D',
+       
       },
   		animation: {
   			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
