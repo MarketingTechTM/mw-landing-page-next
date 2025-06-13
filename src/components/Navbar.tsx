@@ -24,7 +24,7 @@ export const MenuItems = [
     dropdownItems: [
       { title: "Recommended Books", link: "/books" },
       { title: "Recommended Courses", link: "/courses" },
-      { title: "Podcast", link: "/podcasts" },
+      { title: "Videos & Podcast", link: "/podcasts" },
       
     ],
   },

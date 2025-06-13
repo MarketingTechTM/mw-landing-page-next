@@ -1,62 +1,143 @@
-'use client';
+"use client";
 
 import { CtaButton } from "./ui/button";
 import { motion } from "framer-motion";
 import Logo from "./ui/Logo";
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-gray-100 to-gray-200 dark:from-black dark:to-[#0f0f0f] text-black dark:text-white py-10">
-    <div className="flex flex-col items-center justify-center">
-
-    <div className=" mx-auto px-6 container">
-        {/* Upper Divider */}
-        <motion.div 
-          initial={{ scaleX: 0 }} 
-          animate={{ scaleX: 1 }} 
+    <footer className="relative bg-gradient-to-b from-black to-[#0f0f0f] text-white px-6 sm:px-10 py-12">
+      <div className="mx-auto max-w-7xl">
+        {/* Top Divider */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
           transition={{ duration: 1 }}
-          className="w-full h-[1px] bg-gray-400 dark:bg-gray-600 mb-8 origin-left"
+          className="w-full h-[1px] bg-white/20 mb-10 origin-left"
         />
-        
-        {/* Footer Content */}
-        <div className="flex flex-col sm:flex-row  items-center justify-between text-center sm:text-left space-y-4 sm:space-y-0">
-          <Logo height={200} width={200} />
 
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            <CtaButton 
-              title="Book a Strategy Call" 
-              url="/book-a-call" 
-              size="h-16 w-60" 
-              textSize="text-lg" 
+        {/* Main Footer Content */}
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-sm text-white
+         text-center sm:text-left items-center sm:items-start"
+        >
+          {/* Column 1 - Logo and CTA */}
+          <div className="flex flex-col items-center sm:items-start gap-4">
+            <Logo height={200} width={200} href="/" />
+            <CtaButton
+              title="Book a strategy Call"
+              url="/book-a-call"
+              size="h-12 w-56"
+              textSize="text-lg"
               className="font-bold"
             />
-          </motion.div>
+          </div>
+
+          {/* Column 2 - Company */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">COMPANY</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="/about-us" className="hover:text-white transition">
+                  About Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3 - Services */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">SERVICES</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-white transition"
+                >
+                  Growth Hacking
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-white transition"
+                >
+                  Digital Marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-white transition"
+                >
+                  Performance Marketing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4 - Resources */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">RESOURCES</h3>
+            <ul className="space-y-2 text-gray-400">
+             
+              <li>
+                <Link
+                  href="/books"
+                  className="hover:text-white transition"
+                >
+                  Recommended Books
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/courses"
+                  className="hover:text-white transition"
+                >
+                  Recommended Courses
+                </Link>
+              </li>
+               <li>
+                <Link
+                  href="#"
+                  className="hover:text-white transition"
+                >
+                  Videos & Podcast
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        {/* Lower Divider */}
-        <motion.div 
-          initial={{ scaleX: 0 }} 
-          animate={{ scaleX: 1 }} 
+        {/* Bottom Divider */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
           transition={{ duration: 1 }}
-          className="w-full h-[1px] bg-gray-400 dark:bg-gray-600 mt-8 origin-left"
+          className="w-full h-[1px] bg-white/20 mt-10 mb-4 origin-left"
         />
 
-        {/* Footer Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between
-         items-center text-gray-600 dark:text-gray-400 text-sm mt-6">
+        {/* Bottom Footer */}
+        <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-2 sm:gap-0 text-center sm:text-left">
           <p>&copy; 2025 Marketing Wisdom. All Rights Reserved.</p>
-          {/* <Link href="/privacy-policy" className="underline hover:text-black dark:hover:text-white transition">
-            Privacy Policy
-          </Link> */}
+          <div className="flex gap-3">
+            <Link
+              href="/privacy-policy"
+              className="underline hover:text-white transition"
+            >
+              Privacy Policy
+            </Link>
+            <span>|</span>
+            <Link
+              href="/terms-of-use"
+              className="underline hover:text-white transition"
+            >
+              Terms of Use
+            </Link>
+          </div>
         </div>
       </div>
-
-    </div>
     </footer>
   );
 }
