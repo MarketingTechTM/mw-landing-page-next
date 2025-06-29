@@ -38,12 +38,21 @@ export default function BookingForm() {
     formData.append("referral", data.referral);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // const response = await fetch("https://api.web3forms.com/submit", {
+      //   method: "POST",
+      //   body: formData,
+      // });
+
+      // const result = await response.json();
+
+      const response = await fetch("/api/send-email", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
 
       const result = await response.json();
+
       if (result.success) {
         // toast.success("Your booking request has been submitted successfully!", {duration: 18000});
         toast.custom(
