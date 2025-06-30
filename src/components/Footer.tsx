@@ -19,66 +19,69 @@ export default function Footer() {
 
         {/* Main Footer Content */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-sm text-white
+          className="flex justify-between gap-10 text-sm text-white
          text-center sm:text-left items-center sm:items-start"
         >
-          {/* Column 1 - Logo and CTA */}
-          <div className="flex flex-col items-center sm:items-start gap-4">
-            <Logo height={200} width={200} href="/" />
-            <CtaButton
-              title="Book a strategy Call"
-              url="/book-a-call"
-              size="h-12 w-56"
-              textSize="text-lg"
-              className="font-bold"
-            />
-          </div>
+          <div className="flex flex-col md:flex-row justify-between  items-center gap-16 md:items-start  w-full">
+            {/* Column 1 - Logo and CTA */}
+            <div className="flex flex-col items-center sm:items-start gap-4">
+              <Logo height={200} width={200} href="/" />
+              <CtaButton
+                title="Book a strategy Call"
+                url="/book-a-call"
+                size="h-12 w-56"
+                textSize="text-lg"
+                className="font-bold"
+              />
+            </div>
+            {/* Column 2 - Company */}
+            <div>
+              <h3 className="text-white font-semibold mb-3">COMPANY</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <Link
+                    href="/about-us"
+                    className="hover:text-white transition"
+                  >
+                    About Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          {/* Column 2 - Company */}
-          <div>
-            <h3 className="text-white font-semibold mb-3">COMPANY</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/about-us" className="hover:text-white transition">
-                  About Us
-                </Link>
-              </li>
-            </ul>
-          </div>
+            {/* Column 3 - Services */}
+            <div className=" flex flex-col items-center md:items-start">
+              <h3 className="text-white font-semibold mb-3">SERVICES</h3>
+              <ul className="space-y-2 text-gray-400 flex flex-col items-center md:items-start">
+                <li>
+                  <Link
+                    href="/services"
+                    className="hover:text-white transition"
+                  >
+                    Growth Hacking
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services"
+                    className="hover:text-white transition"
+                  >
+                    Digital Marketing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services"
+                    className="hover:text-white transition"
+                  >
+                    Performance Marketing
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          {/* Column 3 - Services */}
-          <div>
-            <h3 className="text-white font-semibold mb-3">SERVICES</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link
-                  href="/services"
-                  className="hover:text-white transition"
-                >
-                  Growth Hacking
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="hover:text-white transition"
-                >
-                  Digital Marketing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="hover:text-white transition"
-                >
-                  Performance Marketing
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4 - Resources */}
-          <div>
+            {/* Column 4 - Resources */}
+            {/* <div>
             <h3 className="text-white font-semibold mb-3">RESOURCES</h3>
             <ul className="space-y-2 text-gray-400">
              
@@ -107,6 +110,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+          </div> */}
           </div>
         </div>
 

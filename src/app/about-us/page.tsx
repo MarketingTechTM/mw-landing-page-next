@@ -53,7 +53,7 @@ export default function Page() {
         <div className="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left
          text-lg md:text-xl text-[#CCCCCC]">
           <p>
-            <span className="font-semibold text-white">
+            <span className="">
               At Marketing Wisdom,
             </span>{" "}
             every brand we partner with gets our relentless focus, proven
@@ -62,7 +62,7 @@ export default function Page() {
           </p>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Still unsure?</h3>{" "}
+            <h3 className="font-bold text-white text-xl md:text-2xl mb-4">Still unsure?</h3>{" "}
             
             <p className="text-[#C3C3C3]">
               Explore our {" "} 
@@ -80,10 +80,10 @@ export default function Page() {
             </h3>
             <p className="text-[#C3C3C3]">
               We&apos;re a team of{" "}
-              <span className="font-semibold text-white">Top 1% marketers</span>{" "}
+              <span className="">Top 1% marketers</span>{" "}
               — battle-tested, data-driven, and obsessed with impact. We work
               with{" "}
-              <span className="font-semibold text-white">selective brands</span>{" "}
+              <span className="">selective brands</span>{" "}
               that are ready to scale, lead, and win.
             </p>
             <p className="mt-2">Are you one of them?</p>

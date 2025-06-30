@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu";
+import {  Menu, MenuItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
 import { CtaButton } from "./ui/button";
@@ -18,16 +18,16 @@ export const MenuItems = [
     title: "Success Stories",
     link: "/customer-stories",
   },
-  {
-    title: "Resources",
-    link: null,
-    dropdownItems: [
-      { title: "Recommended Books", link: "/books" },
-      { title: "Recommended Courses", link: "/courses" },
-      { title: "Videos & Podcast", link: "/podcasts" },
+  // {
+  //   title: "Resources",
+  //   link: null,
+  //   dropdownItems: [
+  //     { title: "Recommended Books", link: "/books" },
+  //     { title: "Recommended Courses", link: "/courses" },
+  //     { title: "Videos & Podcast", link: "/podcasts" },
       
-    ],
-  },
+  //   ],
+  // },
 ];
 
 const DesktopNav = ({ className }: { className?: string }) => {
@@ -46,7 +46,7 @@ const DesktopNav = ({ className }: { className?: string }) => {
             item={menu.title}
             link={menu.link}
           >
-            {menu.dropdownItems && (
+            {/* {menu.dropdownItems && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ const DesktopNav = ({ className }: { className?: string }) => {
                   </HoveredLink>
                 ))}
               </motion.div>
-            )}
+            )} */}
           </MenuItem>
         ))}
       </Menu>

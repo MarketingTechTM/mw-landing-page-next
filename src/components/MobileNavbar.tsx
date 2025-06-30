@@ -84,7 +84,7 @@ export const MobileNavBar = ({
                           transition={{ duration: 0.3 }}
                           className="ml-6 space-y-2 mt-2"
                         >
-                          {item.dropdownItems?.map((subItem) => (
+                          {/* {item.dropdownItems?.map((subItem) => (
                             <motion.div
                               key={subItem.title}
                               whileHover={{ x: 10 }}
@@ -98,7 +98,7 @@ export const MobileNavBar = ({
                                 {subItem.title}
                               </Link>
                             </motion.div>
-                          ))}
+                          ))} */}
                         </motion.div>
                       )}
                     </AnimatePresence>
