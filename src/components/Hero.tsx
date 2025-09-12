@@ -32,7 +32,7 @@ export function Hero() {
               className="text-black dark:text-white dark:opacity-80 
              text-base text-center lg:text-xl max-w-6xl px-2 mt-2"
             >
-              We help B2C SaaS and e-commerce brands with everything from paid
+             We help SaaS and D2C e-commerce brands with everything from paid
               ads to social media, digital analytics to conversion rate
               optimization, go-to-market strategy to growth hacking, and content
               strategy to brand storytelling. Our cutting-edge digital marketing

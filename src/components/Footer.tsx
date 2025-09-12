@@ -25,7 +25,11 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between  items-center gap-16 md:items-start  w-full">
             {/* Column 1 - Logo and CTA */}
             <div className="flex flex-col items-center sm:items-start gap-4">
-              <Logo height={200} width={200} href="/" />
+              <Logo
+                height={200}
+                width={200}
+                href="/?utm_source=homepage&utm_medium=LogoClick&utm_campaign=trackingLogoClick"
+              />
               <CtaButton
                 title="Book a strategy Call"
                 url="/book-a-call"
@@ -40,7 +44,7 @@ export default function Footer() {
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <Link
-                    href="/about-us"
+                    href="/about-us?utm_source=homepage&utm_medium=Footer&utm_campaign=trackingAboutus"
                     className="hover:text-white transition"
                   >
                     About Us
@@ -55,7 +59,7 @@ export default function Footer() {
               <ul className="space-y-2 text-gray-400 flex flex-col items-center md:items-start">
                 <li>
                   <Link
-                    href="/services"
+                    href="/services?utm_source=homepage&utm_medium=Footer&utm_campaign=trackingServices"
                     className="hover:text-white transition"
                   >
                     Growth Hacking
@@ -63,7 +67,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/services"
+                    href="/services?utm_source=homepage&utm_medium=Footer&utm_campaign=trackingServices"
                     className="hover:text-white transition"
                   >
                     Digital Marketing
@@ -71,7 +75,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/services"
+                    href="/services?utm_source=homepage&utm_medium=Footer&utm_campaign=trackingServices"
                     className="hover:text-white transition"
                   >
                     Performance Marketing

@@ -9,14 +9,27 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useSwipe } from "@/hooks/useSwipe";
 import { MobileNavBar } from "./MobileNavbar";
 
+
 export const MenuItems = [
   {
     title: "Services",
-    link: "/services",
+    link: "/services?utm_source=homepage&utm_medium=TopNavBar&utm_campaign=trackingServices",
+    external: false
   },
   {
     title: "Success Stories",
-    link: "/customer-stories",
+    link: "/customer-stories?utm_source=homepage&utm_medium=TopNavBar&utm_campaign=trackingSuccessStories",
+    external: false
+  },
+  {
+    title: "About",
+    link: "/about-us?utm_source=homepage&utm_medium=TopNavbar&utm_campaign=trackingAboutus",
+    external: false
+  },
+  {
+    title: "Blog",
+    link: "https://marketingwisdom.me/?utm_source=AgencyHomePage&utm_medium=TopNavBar&utm_campaign=trackingBlogTraffic",
+    external: true
   },
   // {
   //   title: "Resources",
@@ -45,6 +58,7 @@ const DesktopNav = ({ className }: { className?: string }) => {
             active={active}
             item={menu.title}
             link={menu.link}
+            external= {menu.external}
           >
             {/* {menu.dropdownItems && (
               <motion.div
@@ -91,7 +105,7 @@ export function Navbar() {
   return (
     <>
       <div className="hidden xl:flex flex-row justify-between items-center dark:bg-black xl:px-10 px-0 py-6">
-        <Logo height={300} width={250} href="/" />
+        <Logo height={300} width={250} href="/?utm_source=homepage&utm_medium=LogoClick&utm_campaign=trackingLogoClick" />
         <div className="relative w-full flex items-center justify-between bg-black">
           <DesktopNav className="top-2" />
         </div>
@@ -106,7 +120,7 @@ export function Navbar() {
 
       <div className="xl:hidden flex">
         <div className="flex flex-row justify-between items-center w-full px-3 py-3 dark:bg-black bg-slate-50">
-          <Logo height={100} width={200} href="/" />
+          <Logo height={100} width={200} href="/?utm_source=homepage&utm_medium=LogoClick&utm_campaign=trackingLogoClick" />
 
           <div className="flex gap-10 justify-between items-center">
             <CtaButton
@@ -140,7 +154,8 @@ export function Navbar() {
               transition={{ duration: 0.5 }}
               className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-70 z-40"
               onClick={() => setMobileOpen(false)}
-            />// backdrop
+            /> 
+            // backdrop
           )}
           <MobileNavBar
             isMobileMenuActive={mobileOpen}

@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link, { LinkProps } from "next/link";
 
 
+
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -17,18 +18,27 @@ export const MenuItem = ({
   active,
   item,
   link,
+  external,
   children,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   link?: string | null;
+  external: boolean;
   children?: React.ReactNode;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
       {/* If there's a link, wrap with Link, otherwise use p */}
       {link ? (
+        external ? 
+        <a href= {link}
+         target="_blank"
+         rel="noopener noreferrer" 
+         className="cursor-pointer text-black dark:text-white hover:opacity-80">
+          {item}
+        </a> :
         <Link
           href={link}
           className="cursor-pointer text-black dark:text-white hover:opacity-80"
