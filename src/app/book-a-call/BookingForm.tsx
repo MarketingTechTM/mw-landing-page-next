@@ -125,7 +125,7 @@ export default function BookingForm() {
 
   return (
     <div className="p-8 rounded-xl border border-[#C5BDBD4D] shadow-lg">
-      <p className="mt-5 text-[#A1A1AA] text-sm text-justify">
+      <p className="mb-5 text-left text-sm font-medium text-black dark:text-white leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
         Fill out the form, and we&apos;ll contact you to assess your
         brand&apos;s eligibility.
       </p>
