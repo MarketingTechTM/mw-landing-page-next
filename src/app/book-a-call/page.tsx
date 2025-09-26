@@ -20,24 +20,29 @@ export default function BookACall() {
           >
             <div
               className="text-[50px] font-semibold leading-[96%] tracking-[13%]
-             lg:text-[80px] lg:font-bold lg:leading-tight text-white text-justify"
+             lg:text-7xl lg:font-bold lg:leading-tight text-white text-justify"
             >
               Scale Your <br /> Company Faster
             </div>
 
             <p className="text-[18px] md:text-[22px] text-gray-400 mt-5 lg:mt-9 leading-tight text-justify">
-              Marketing Wisdom empowers SaaS and D2C e-commerce brands to
-              attract qualified leads, maximize ROI, lower acquisition costs,
-              and accelerate sustainable growth.
+              Marketing Wisdom helps SaaS and D2C brands attract qualified
+              leads, maximize ROI, and drive sustainable growth.
             </p>
             <p className="text-[18px] md:text-[22px] text-gray-400 mt-5 lg:mt-4 leading-tight text-justify">
-              We collaborate only with brands that share our vision and are prepared to scale strategically.
+              We&apos;re not a typical agency—we&apos;re a growth partner. We
+              work with only a select few brands at a time, giving each our full
+              focus and commitment.
             </p>
 
-            <p className="mt-5 text-[#A1A1AA] text-sm text-justify">
-              Fill out the form, and our expert will contact you to assess your
-              brand&apos;s eligibility for partnership.
+            <p className="text-[18px] md:text-[22px] text-gray-400 mt-5 lg:mt-4 leading-tight text-justify">
+              Because we deliver results, we only partner with brands ready to
+              give us the autonomy to scale long-term.
             </p>
+
+            {/* <p className="mt-5 text-[#A1A1AA] text-sm text-justify">
+              Fill out the form, and we&apos;ll contact you to assess your brand&apos;s eligibility. 
+            </p> */}
           </div>
 
           {/* right section */}

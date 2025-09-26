@@ -25,8 +25,8 @@ export default function Home() {
   Components here left:- 
   1. hero - done
   2. TrustedBrands - done
-  3. Success Stories
-  4. Marketing Wisdom
+  3. Success Stories- done
+  4. Marketing Wisdom- dpne
   5. podcast and video section
   // then the general footer to be included in the layout.tsx
 
@@ -37,8 +37,8 @@ export default function Home() {
   3. /customer-stories - Success Stories
   4. resources all dropdowns:- 
 
-      /resources - Resources
-      /resources/books - Books
+      /resources - Resources- done
+      /resources/books - Books- done
       /resources/podcasts - Podcasts
       /resources/courses - Courses
 

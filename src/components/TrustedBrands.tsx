@@ -81,13 +81,13 @@ export const TrustedBrands = ({
         )}
       >
         {brands.map((brand, idx) => (
-          <li key={idx} className="shrink-0">
+          <li key={idx} className="shrink-0 flex items-center justify-center w-40 h-40">
             <Image
               src={brand.src}
               alt={brand.name}
               width={150}
               height={75}
-              className="object-contain"
+              className="object-contain w-full h-full"
             />
           </li>
         ))}
@@ -104,6 +104,7 @@ export default function TrustedBrandsSection() {
     { name: "Astro Sadhana", src: "/brand_logo/logos/4r.png" },
     { name: "AstroAI", src: "/brand_logo/logos/5r.png" },
     { name: "Sadhana App", src: "/brand_logo/logos/6r.png" },
+    {name: "Tantra Sadhana", src: "/brand_logo/logos/7.webp"}
   ];
 
 

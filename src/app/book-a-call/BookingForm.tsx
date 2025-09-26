@@ -11,6 +11,7 @@ interface FormData {
   email: string;
   firstname: string;
   lastname: string;
+  companyName: string;
   jobTitle: string;
   budget: number;
   referral: string;
@@ -33,6 +34,7 @@ export default function BookingForm() {
     formData.append("email", data.email);
     formData.append("firstname", data.firstname);
     formData.append("lastname", data.lastname);
+    formData.append("companyName", data.companyName);
     formData.append("jobTitle", data.jobTitle);
     formData.append("budget", data.budget.toString());
     formData.append("referral", data.referral);
@@ -123,6 +125,10 @@ export default function BookingForm() {
 
   return (
     <div className="p-8 rounded-xl border border-[#C5BDBD4D] shadow-lg">
+      <p className="mt-5 text-[#A1A1AA] text-sm text-justify">
+        Fill out the form, and we&apos;ll contact you to assess your
+        brand&apos;s eligibility.
+      </p>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         <input
           type="hidden"
@@ -188,6 +194,23 @@ export default function BookingForm() {
             )}
           </LabelInputContainer>
         </div>
+
+         <LabelInputContainer>
+          <Label htmlFor="company-name" className="text-left text-white">
+            Company Name *
+          </Label>
+          <Input
+            id="company-name"
+            type="text"
+            className="bg-black/60 text-white border-gray-600 border shadow-[inset_0px_4px_20px_0px_#FFFFFF40]"
+            {...register("companyName", { required: "Company Name is required" })}
+          />
+          {errors.companyName && (
+            <p className="text-red-500 text-sm text-start">
+              {errors.companyName.message}
+            </p>
+          )}
+        </LabelInputContainer>
 
         <LabelInputContainer>
           <Label htmlFor="job-title" className="text-left text-white">
